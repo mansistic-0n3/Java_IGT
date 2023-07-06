@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import="java.sql.*" 
+import="java.io.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BANK</title>
+</head>
+<body>
+<%
+int id = Integer.parseInt(request.getParameter("id"));
+String name = request.getParameter("name");
+int acc = Integer.parseInt(request.getParameter("acc"));
+String ifsc = request.getParameter("ifsc");
+String pan = request.getParameter("pan");
+int ph = Integer.parseInt(request.getParameter("ph"));
+int a = Integer.parseInt(request.getParameter("adhar"));
+int ibal = Integer.parseInt(request.getParameter("ibal"));
+
+try {		
+	 Class.forName("com.mysql.cj.jdbc.Driver");
+     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/igt", "root", "1234");
+     PreparedStatement pstmt=con.prepareStatement("insert into Bank values(?,?,?,?,?,?,?,?)");
+		
+		pstmt.setInt(1, id);
+		pstmt.setString(2, name);
+		pstmt.setInt(3, acc);
+		pstmt.setString(4, ifsc);
+		pstmt.setString(5, pan);
+		pstmt.setInt(6, ph);
+		pstmt.setInt(7, a);
+		pstmt.setInt(8, ibal);
+		pstmt.execute();
+		
+		PrintWriter ou = response.getWriter();
+ou.print("<div style=\"max-width: 400px; text-align:center; margin: 0 auto; padding: 40px; background-color: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\">");
+ou.print("<h4 style=\"text-align: center; color: #333333;\">Your details are here-</h4>");
+
+ou.print("ID : "+id+"<br>");
+ou.print("NAME : "+name+"<br>");
+ou.print("ACCOUNT NUMBER : "+acc+"<br>");
+ou.print("IFSC Code : "+ifsc+"<br>");
+ou.print("PAN Number : "+pan+"<br>");
+ou.print("Phone : "+ph+"<br>");
+ou.print("Adhar : "+a+"<br>");
+ou.print("Initial Balance : "+ibal+"<br>");
+ou.println("<h2>Account created sucessfully...!</h2>");
+ou.print("<br><br><a href='Home.html'>Back to HOME</a>");
+ou.print("</div>");
+}
+
+catch (Exception e) {
+System.out.println(e);
+}
+%>
+</body>
+</html>

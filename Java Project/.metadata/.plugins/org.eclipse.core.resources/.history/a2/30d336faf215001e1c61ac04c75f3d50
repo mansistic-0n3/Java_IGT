@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body style="background-color: #f2f2f2; ">
+  <div style="max-width: 400px; margin: 0 auto; padding: 40px; background-color: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h2 style="text-align: center; color: #333333;">CREATE ACCOUNT</h2>
+    <form action="register">
+      <br><br>
+        Id : <input type="text" name="id" placeholder="Enter your User Name" style="width: 60%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        Name : <input type="text" name="name" placeholder="Enter your password" style="width: 60%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+       <br><br>
+        Age : <input type="text" name="age" placeholder="Enter your User Name" style="width: 60%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        IFSC Code : <input type="text" name="ifsc" placeholder="Enter your password" style="width: 60%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+        <br><br>
+        PAN Number : <input type="text" name="pan" placeholder="Enter your User Name" style="width: 60%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        Phone : <input type="text" name="ph" placeholder="Enter your password" style="width: 60%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+       <br><br>
+        Adhar : <input type="text" name="adhar" placeholder="Enter your User Name" style="width: 60%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        Initial Balance : <input type="text" name="ibal" placeholder="Enter your password" style="width: 60%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        <button type="submit" style="width: 50%; padding: 8px; border-radius: 3px; border: none; background-color: #4CAF50; color: #ffffff; cursor: pointer;">CREATE</button>
+      <br>
+    </form>
+  </div>
+</body>
+</html>

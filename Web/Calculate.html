@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function abc() {
+            var firstname = document.form1.firstname.value;
+            var lastname = document.form1.lastname.value;
+            var fullname = firstname + " " + lastname;
+            alert("Hi! " + fullname);
+            document.form1.fullname.value = fullname;
+        }
+
+        function add() {
+            var a = parseInt(document.form2.a.value);
+            var b = parseInt(document.form2.b.value);
+            var result = a + b;
+            document.form2.result.value = result;
+        }
+
+        function sub() {
+            var a = parseInt(document.form2.a.value);
+            var b = parseInt(document.form2.b.value);
+            var result = a - b;
+            document.form2.result.value = result;
+        }
+
+        function mul() {
+            var a = parseInt(document.form2.a.value);
+            var b = parseInt(document.form2.b.value);
+            var result = a * b;
+            document.form2.result.value = result;
+        }
+
+        function div() {
+            var a = parseInt(document.form2.a.value);
+            var b = parseInt(document.form2.b.value);
+            var result = a / b;
+            document.form2.result.value = result;
+        }
+    </script>
+</head>
+<body>
+    <marquee onmouseover="stop()" onmouseout="start()">
+        <h1>Hi! Welcome to WebApplication</h1>
+    </marquee>
+    <div style="text-align: center;">
+        <h4>LOGIN</h4>
+        <form name="form1" action="">
+            First Name: <input type="text" name="firstname" id=""><br><br>
+            Last Name: <input type="text" name="lastname" id=""><br><br>
+            Full Name: <input type="text" name="fullname" id=""><br><br>
+            <input type="button" value="LOGIN" onclick="abc()"><br><br><br><br>
+        </form>
+        <form name="form2">
+            Enter values to perform action <br>
+            A : <input type="text" name="a"><br><br>
+            B : <input type="text" name="b"><br><br>
+            <input type="button" value="+" onclick="add()">
+            <input type="button" value="-" onclick="sub()">
+            <input type="button" value="*" onclick="mul()">
+            <input type="button" value="/" onclick="div()"><br><br>
+            Result : <input type="text" name="result"><br><br>
+        </form>
+    </div>
+</body>
+</html>

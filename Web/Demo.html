@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc(){
+            firstname=document.form1.firstname.value;
+            lastname=document.form1.lastname.value;
+            fullname=firstname+" "+lastname;
+            alert("Hi! " +fullname);
+            document.form1.fullname.value=fullname;
+        }
+    </script>
+</head>
+
+<body bgcolor="turquoise">
+    <marquee onmouseover="stop()" onmouseout="start()">
+        <h1>Hi! Welcome to WebApplication</h1>
+    </marquee>
+    <div style="text-align: center;">
+        <h1>LOGIN</h1>
+        <form name="form1" action="">
+            First Name: <input type="text" name="firstname" id=""><br>
+            Last Name: <input type="text" name="lastname" id=""><br>
+            <input type="button" value="LOGIN" onclick="abc()"><br>
+            Full Name: <input type="text" name="fullname" id=""><br>
+        </form>
+    </div>
+</body>
+</html>

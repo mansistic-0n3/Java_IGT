@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BANK</title>
+</head>
+<body style="background-color: #f2f2f2; ">
+  <div style="max-width: 400px; margin: 0 auto; padding: 40px; background-color: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h2 style="text-align: center; color: #333333;">CREATE ACCOUNT</h2>
+    <form action="createJSP.jsp">
+      <br><br>
+        Id : <input type="text" name="id" placeholder="Enter your ID" style="width: 80%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        Name : <input type="text" name="name" placeholder="Enter your Name" style="width: 73%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+       <br><br>
+        Account Number : <input type="text" name="acc" placeholder="Enter your Account number" style="width: 56%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        IFSC Code : <input type="text" name="ifsc" placeholder="Enter IFSC Code" style="width: 65%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+        <br><br>
+        PAN Number : <input type="text" name="pan" placeholder="Enter PAN Number" style="width: 61%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        Phone : <input type="text" name="ph" placeholder="Enter your Phone Number" style="width: 72%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+       <br><br>
+        Adhar : <input type="text" name="adhar" placeholder="Enter your Adhar number" style="width: 72%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br>
+        Initial Balance : <input type="text" name="ibal" placeholder="Enter your Initial Balance in Bank" style="width: 59%; padding: 8px; border-radius: 3px; border: 1px solid #cccccc;">
+      <br><br><dir style="text-align: center;">
+        <button type="submit" style="width: 50%; padding: 8px; border-radius: 3px; border: none; background-color: #4CAF50; color: #ffffff; cursor: pointer;">CREATE</button>
+      </dir><br>
+    </form>
+  </div>
+</body>
+</html>

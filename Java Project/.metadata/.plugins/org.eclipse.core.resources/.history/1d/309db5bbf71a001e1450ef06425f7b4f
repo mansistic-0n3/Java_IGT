@@ -1,0 +1,41 @@
+package com;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.util.Date;
+
+class A{
+	A(){
+		Date d = new Date();
+		System.out.println(d);
+		
+		LocalDate ld = LocalDate.now();
+		System.out.println(ld);
+		
+		LocalDate ld1 = LocalDate.of(2015,02,20);
+		System.out.println(ld1);
+		
+		LocalDate ld2 = LocalDate.parse("2012-09-01");
+		System.out.println(ld2);
+		
+		LocalDate tom = LocalDate.now().plusDays(1);
+		System.out.println(tom);
+		
+		DayOfWeek day = LocalDate.parse("2018-09-01").getDayOfWeek();
+		System.out.println(day);
+		
+		int month = LocalDate.parse("2018-09-01").getDayOfMonth();
+		System.out.println(month);
+		
+		boolean leap = LocalDate.now().isLeapYear();
+		System.out.println(leap);
+	}
+}
+
+public class date {
+
+	public static void main(String[] args) {
+		A a = new A();
+	}
+
+}

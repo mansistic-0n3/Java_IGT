@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BANK</title>
+</head>
+<body style="background-color: #f2f2f2; text-align:center;">
+<div style="max-width: 400px; margin: 0 auto; padding: 40px; background-color: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+ <h2 style="text-align: center; color: #333333;">YOUR BANK</h2>
+ <h4 style="text-align: center; color: #333333;">Choose your action...</h4>
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 400px; margin: 0 auto; padding: 40px;">
+   <form action="create.html"> <div style="text-align: center;padding:4px;">
+      <input type="submit" value = "CREATE ACCOUNT" style="width: 100%; padding: 10px; border-radius: 3px; border: none; background-color: #4CAF50; color: #ffffff; cursor: pointer;">
+    </div></form>
+   <form action="Deposit.html"> <div style="text-align: center;padding:4px;">
+      <input type="submit" value = "DEPOSIT" style="width: 100%; padding: 10px; border-radius: 3px; border: none; background-color: #4CAF50; color: #ffffff; cursor: pointer;">
+    </div></form>
+    <form action="Withdraw.html"> <div style="text-align: center; padding:4px;">
+      <input type="submit" value = "WITHDRAW" style="width: 100%; padding: 10px; border-radius: 3px; border: none; background-color: #4CAF50; color: #ffffff; cursor: pointer;">
+    </div></form>
+     <form action="Bal.html"> <div style="text-align: center;padding:4px;">
+      <input type="submit" value = "BALANCE ENQUIRY" style="width: 100%; padding: 10px; border-radius: 3px; border: none; background-color: #4CAF50; color: #ffffff; cursor: pointer;">
+    </div></form>
+  </div></div>
+</body>
+</html>

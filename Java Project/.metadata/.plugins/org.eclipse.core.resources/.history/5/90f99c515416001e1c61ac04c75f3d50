@@ -1,0 +1,54 @@
+package com;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class draw extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public draw() {
+        super();
+    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int num = Integer.parseInt(request.getParameter("num"));
+		int amt = Integer.parseInt(request.getParameter("amt"));
+		
+		try {		
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/igt","root", "1234");
+			PreparedStatement pstmt=con.prepareStatement("update Bank set Balance=Balance-? where accNo=? or pan=? or aadhar=?");
+
+			pstmt.setInt(1, amt);
+			pstmt.setInt(2, num);
+			pstmt.setInt(3, num);
+			pstmt.setInt(4, num);
+			pstmt.execute();
+				
+		PrintWriter out = response.getWriter();
+		out.print("<div style=\"background-color: #f2f2f2; text-align:center;>");
+		out.print("<br><br><div style=\"max-width: 400px; margin: 0 auto; padding: 40px; background-color: #ffffff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\">\r\n"
+				+ "    <br><br><h2 style=\"text-align: center; color: #333333;\">Amount Withdrawn Successfully!</h2>");
+		out.print("<br><a href='Home.html'>Back to HOME<br><br></a></div><br><br>");
+		
+	}
+catch (Exception e) {
+	System.out.println(e);
+	}
+}
+
+	
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

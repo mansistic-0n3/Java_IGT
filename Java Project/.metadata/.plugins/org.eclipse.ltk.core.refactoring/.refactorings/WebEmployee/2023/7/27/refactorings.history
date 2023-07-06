@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;main&apos; to &apos;Deposit.html&apos;&#x0D;&#x0A;- Original project: &apos;WebEmployee&apos;&#x0D;&#x0A;- Destination element: &apos;Deposit.html&apos;&#x0D;&#x0A;- Original element: &apos;main&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move folder" element1="src/main" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1688318752481" target="/Bank/src/main/webapp/Deposit.html" units="0" version="1.0"/>
+</session>

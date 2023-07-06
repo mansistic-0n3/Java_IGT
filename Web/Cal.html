@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal() {
+  var num1 = parseFloat(document.getElementById('num1').value);
+  var num2 = parseFloat(document.getElementById('num2').value);
+  var operator = document.getElementById('operator').value;
+
+  var result;
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+    default:
+      result = "Invalid operator";
+  }
+
+  document.getElementById('result').innerHTML = "Result: " + result;
+}
+    </script>
+</head>
+
+<body>
+    <marquee onmouseover="stop()" onmouseout="start()">
+        <h1>Hi! Welcome to WebApplication</h1>
+    </marquee>
+    <div style="text-align: center;">
+        <h1>LOGIN</h1>
+        <form name="form1" action="">
+            First Name: <input type="number" name="num1" id=""><br>
+            Last Name: <input type="number" name="num2" id=""><br>
+            <input type="button" value="+" name = "operator" onclick="cal()">
+            <input type="button" value="-" onclick="cal()">
+            <input type="button" value="*" onclick="cal()">
+            <input type="button" value="/" onclick="cal()"><br><br>
+            Result: <input type="text" name="res" id=""><br>
+        </form>
+    </div>
+</body>
+</html>

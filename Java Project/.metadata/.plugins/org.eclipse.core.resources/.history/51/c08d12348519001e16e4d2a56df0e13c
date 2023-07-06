@@ -1,0 +1,10 @@
+package com;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Emp {
+	private int uid;
+	private String name;
+	private String desig;
+}
