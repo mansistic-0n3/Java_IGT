@@ -49,6 +49,9 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="HBM_Hibernate"/>
+			<item value="HBMHibernate"/>
+			<item value="HibernateHBM"/>
 			<item value="ProductHibernate"/>
 			<item value="StudentHibernate"/>
 			<item value="Demo"/>

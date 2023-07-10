@@ -1,0 +1,13 @@
+package com.example.SpringProject.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.example.repo.CrudRepo;
+
+@Service
+public class CrudService {
+
+	@Autowired
+	private CrudRepo repo;
+	
+}
